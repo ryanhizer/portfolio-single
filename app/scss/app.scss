@@ -1,5 +1,6 @@
 @import "bootstrap";
 $brand-color: turquoise;
+$brand-color: deepskyblue;
 $accent-color: lightgray;
 
 *:focus {
@@ -18,8 +19,11 @@ $accent-color: lightgray;
     }
 }
 .btn-primary {
-    background:darken($brand-color,15);
+    background:darken($brand-color,0);
     border:none;
+    &:hover {
+      background:darken($brand-color,5);
+    };
 }
 
 .fa-big {
@@ -81,6 +85,7 @@ $accent-color: lightgray;
 section {
     color:white;
     position:relative;
+    overflow:hidden;
 }
 section:first-of-type {
     height:100vh;
@@ -145,6 +150,66 @@ section:first-of-type {
     opacity:.5;
     &:hover {
         opacity:1;
+    }
+    &.deadceleb {
+      background:url(../i/2k16bg.jpg);
+      background-size:cover;
+      background-position:center;
+    }
+    &.appalasian {
+      background:url(../i/appalasian-thumb.jpg);
+      background-size:cover;
+      background-position:center;
+    }
+    &.auspeed {
+      background:url(../i/auspeedbg.jpg);
+      background-size:cover;
+      background-position:center;
+    }
+    &.balcony {
+      background:url(../i/balconybg.jpg);
+      background-size:cover;
+      background-position:center;
+    }
+    &.showclix {
+      background:url(../i/showclix-thumb.jpg);
+      background-size:cover;
+      background-position:center;
+    }
+    &.yogurt {
+      background:url(../i/simplyyogurtbg.jpg);
+      background-size:cover;
+      background-position:center;
+    }
+    &.traveldeeper {
+      background:url(../i/traveldeeperbg.jpg);
+      background-size:cover;
+      background-position:center;
+    }
+    &.usbgpgh {
+      background:url(../i/usbgpghbg.jpg);
+      background-size:cover;
+      background-position:center;
+    }
+    &.garbagedays {
+      background:url(../i/donut@2x.jpg);
+      background-size:cover;
+      background-position:center;
+    }
+    &.photography {
+      background:url(../i/clay@2x.jpg);
+      background-size:cover;
+      background-position:center;
+    }
+    &.flyers {
+      background:url(../i/shakyshrinesbg.jpg);
+      background-size:cover;
+      background-position:center;
+    }
+    &.lexalytics {
+      background:url(../i/lexalyticsbg.jpg);
+      background-size:cover;
+      background-position:center;
     }
 }
 h1,h2,h3,h4,h5,h6,p,li,a {
@@ -211,13 +276,13 @@ img {
     @include gradient-directional($brand-color,lighten($brand-color,10),20deg);
 }
 #contact {
-    @include gradient-directional(lightgray,darkgray,160deg);
+    @include gradient-directional(darken($accent-color,10),$accent-color,160deg);
 }
 .rotate-left {
-    transform:rotate(-.6deg);
+    transform:rotate(-2deg);
 }
 .rotate-right {
-    transform:rotate(.6deg);
+    transform:rotate(1deg);
 }
 .wacky-left {
     transform:rotate(45deg);
@@ -342,11 +407,19 @@ ul.social {
     color:darken($brand-color,10);
 }
 .spin-scale {
-    animation: spin-scale 50s infinite ease-in-out;
+    animation: spin-scale 100s infinite ease-in-out;
     color:lighten($brand-color,5);
     opacity:1;
 }
 .spin-scale-fast {
-    animation: spin-scale 48s infinite ease-in-out;
+    animation: spin-scale 108s infinite ease-in-out;
     opacity:1;
+}
+#contact .spin-scale {
+    color:darken($accent-color,7);
+    opacity:.5;
+}
+#contact .spin-scale-fast {
+    color:darken($accent-color,5);
+    opacity:.5;
 }

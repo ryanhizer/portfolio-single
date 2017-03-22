@@ -13,5 +13,20 @@
     "gulp": "^3.9.1",
     "gulp-sass": "^3.1.0",
     "scrollmagic": "^2.0.5"
-  }
+  },
+  "dependencies": {
+    "browser-sync": "^2.18.8",
+    "bootstrap": "^4.0.0-alpha.4",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "scrollmagic": "^2.0.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanhizer/portfolio-single.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ryanhizer/portfolio-single/issues"
+  },
+  "homepage": "https://github.com/ryanhizer/portfolio-single#readme"
 }
