@@ -263,6 +263,7 @@ img {
 }
 #work {
     @include gradient-y($accent-color,darken($accent-color,60),0%,100%);
+    @include gradient-y-three-colors(darken($accent-color,60),$accent-color,50%,darken($accent-color,60));
     // @include gradient-y($brand-color,darken($brand-color,60),0%,100%);
 }
 #cv ul li i {
@@ -401,6 +402,42 @@ ul.social {
   100% {
     transform: rotate(360deg) scale(1);
   }
+}
+
+@keyframes float {
+  0% {
+    transform: rotate(-.5deg);
+    translate:(0px,0px);
+  }
+  50% {
+    transform: rotate(.5deg) scale(1);
+    translate:(10px,5px);
+  }
+  100% {
+    transform: rotate(-.5deg) scale(1);
+    translate:(0px,0px);
+  }
+}
+
+@keyframes float-opp {
+  0% {
+    transform: rotate(1deg);
+    translate:(0px,0px);
+  }
+  50% {
+    transform: rotate(-3deg) scale(1);
+    translate:(-5px,-5px);
+  }
+  100% {
+    transform: rotate(1deg) scale(1);
+    translate:(0px,0px);
+  }
+}
+.float {
+    animation: float 15s infinite ease-in-out;
+}
+.float-opp {
+    animation: float-opp 10s infinite ease-in-out;
 }
 .spin {
     animation: spin 5s infinite linear;
