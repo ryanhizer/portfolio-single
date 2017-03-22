@@ -1,0 +1,352 @@
+@import "bootstrap";
+$brand-color: turquoise;
+$accent-color: lightgray;
+
+*:focus {
+    outline:none!important;
+}
+*{
+  font-family:roboto;
+}
+.navbar {
+    background:transparentize($brand-color,1);
+    @media (max-width:780px) {
+        background:$brand-color;
+    }
+    .fa {
+        color:white;
+    }
+}
+.btn-primary {
+    background:darken($brand-color,15);
+    border:none;
+}
+
+.fa-big {
+    position:absolute;
+    top:-150px;
+    color:$brand-color;
+    left:-250px;
+    font-size:900px;
+    @media (min-width:1200px) {
+        font-size:1200px;
+    }
+    @media (max-width:780px) {
+        left:100px;
+        font-size:700px;
+    }
+}
+.col-md-3 {
+    padding:0;
+}
+.navbar-nav .nav-link a {
+    color:white!important;
+}
+.navbar-toggler {
+    padding-left:0;
+}
+.navbar .navbar-brand {
+    color:white;
+    float:none;
+    top:-3px;
+    position:relative;
+    span {
+        opacity:.5;
+    }
+    &:hover {
+        color:white;
+    }
+}
+.navbar {
+    .nav-link, .nav-link:hover, .nav-link.active, .nav-link.active:focus, .nav-link.active:hover {
+        color:white;
+        opacity:1;
+    }
+    .nav-link {
+        opacity:.5;
+    }
+}
+.jumbotron {
+    position:relative;
+    background:#343838;
+    background:url(../i/me.jpg);
+    background-size:cover;
+    background-position:center;
+    color:whitesmoke;
+    border-radius:0;
+    margin-bottom:0;
+    height:100vh;
+    padding:0;
+}
+section {
+    color:white;
+    position:relative;
+}
+section:first-of-type {
+    height:100vh;
+    overflow:hidden;
+    background:$brand-color;
+    background:url(../i/me.jpg);
+    @include gradient-directional(lighten($brand-color,5),$brand-color,20deg);
+    background-size:cover;
+    background-position:center;
+}
+#cv .row, #contact .row {
+    padding:100px 0;
+    ul {
+        margin:0;
+    }
+    .row {
+        padding:0;
+        margin:0;
+    }
+}
+.job {
+    padding-bottom:20px;
+    h6 {
+        font-weight:700;
+        font-size:14px;
+        margin-bottom:3px;
+    }
+    p {
+        font-style:italic;
+        margin-bottom:0px;
+    }
+}
+
+//forms
+
+.form-control {
+    border:none;
+    padding:15px;
+    font-size:14px;
+}
+.job h6, label {
+    font-size:14px;
+    font-weight:600;
+}
+::-webkit-input-placeholder {
+    font-size:14px;
+    font-weight:100;
+}
+
+#contact .row {
+    padding-bottom:154px;
+}
+.col-md-6 .col-md-4 {
+    padding:0;
+}
+.item {
+    width:100%;
+    padding:100px 0;
+    background:url(../i/me.jpg);
+    background-size:cover;
+    background-position:center;
+    opacity:.5;
+    &:hover {
+        opacity:1;
+    }
+}
+h1,h2,h3,h4,h5,h6,p,li,a {
+    color:white;
+}
+h1 {
+    font-weight:400;
+    letter-spacing:1px;
+    font-size:3em;
+    width:100%;
+    margin:0;
+    display:block;
+    span {
+        opacity:.3;
+    }
+}
+h2 {
+    margin-bottom:20px;
+    padding-bottom:10px;
+    border-bottom:2px dotted white;
+    position:relative;
+    .fa {
+        margin-right:10px;
+    }
+}
+h4 {
+    opacity:1;
+    font-weight:300;
+    margin-top:50px;
+    margin-bottom:20px;
+}
+p, ul li {
+    font-size:14px;
+    font-weight:400;
+    opacity:1;
+}
+ul {
+    margin-left:0;
+    padding-left:0;
+    li {
+        list-style-type:none;
+        &.hide {
+            opacity:0;
+        }
+    }
+}
+img {
+    width:100%;
+    max-width:100%;
+    border:1px solid white;
+}
+#work {
+    @include gradient-y($accent-color,darken($accent-color,60),0%,100%);
+    // @include gradient-y($brand-color,darken($brand-color,60),0%,100%);
+}
+#cv ul li i {
+    display:inline-block;
+    text-align:center;
+    margin-right:5px;
+    // color:green;
+}
+#cv {
+    background:$brand-color;
+    @include gradient-directional($brand-color,lighten($brand-color,10),20deg);
+}
+#contact {
+    @include gradient-directional(lightgray,darkgray,160deg);
+}
+.rotate-left {
+    transform:rotate(-.6deg);
+}
+.rotate-right {
+    transform:rotate(.6deg);
+}
+.wacky-left {
+    transform:rotate(45deg);
+}
+.wacky-right {
+    transform:rotate(-45deg);
+}
+
+
+/* Icon 1 */
+
+#nav-icon1, #nav-icon2, #nav-icon3, #nav-icon4 {
+  width: 17px;
+  height: 20px;
+  position: relative;
+  margin: 0px auto;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+#nav-icon1 span, #nav-icon3 span, #nav-icon4 span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  margin-top:3px;
+  background: white;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+ul.social {
+    padding-top:40px;
+    li {
+        &:first-of-type {
+            margin-left:0;
+        }
+        float:left;
+        margin:0 8px;
+        font-size:20px;
+    }
+}
+
+/* Icon 3 */
+
+#nav-icon3 span:nth-child(1) {
+  top: 0px;
+}
+
+#nav-icon3 span:nth-child(2),#nav-icon3 span:nth-child(3) {
+  top: 6px;
+}
+
+#nav-icon3 span:nth-child(4) {
+  top: 12px;
+}
+
+#nav-icon3.open span:nth-child(1) {
+  top: 6px;
+  width: 0%;
+  left: 50%;
+}
+
+#nav-icon3.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#nav-icon3.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#nav-icon3.open span:nth-child(4) {
+  top: 6px;
+  width: 0%;
+  left: 50%;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-scale {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(2);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+.spin {
+    animation: spin 5s infinite linear;
+    color:darken($brand-color,10);
+}
+.spin-scale {
+    animation: spin-scale 50s infinite ease-in-out;
+    color:lighten($brand-color,5);
+    opacity:1;
+}
+.spin-scale-fast {
+    animation: spin-scale 48s infinite ease-in-out;
+    opacity:1;
+}
