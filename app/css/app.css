@@ -4682,11 +4682,26 @@ a.text-danger:focus, a.text-danger:hover {
 * {
   font-family: roboto; }
 
+::selection {
+  background: #05d1a9;
+  /* WebKit/Blink Browsers */ }
+
+::-moz-selection {
+  background: #ffb7b7;
+  /* Gecko Browsers */ }
+
+body {
+  background-repeat: repeat-x;
+  background-image: linear-gradient(180deg, #3498DB, #1ABC9C); }
+
 .navbar {
-  background: rgba(0, 191, 255, 0); }
+  background: rgba(52, 152, 219, 0); }
   @media (max-width: 780px) {
     .navbar {
-      background: deepskyblue; } }
+      background: #3498DB; } }
+  .navbar.darken {
+    background-repeat: repeat-x;
+    background-image: linear-gradient(45deg, #3498db, #1ABC9C); }
   .navbar .fa {
     color: white; }
 
@@ -4694,7 +4709,8 @@ a.text-danger:focus, a.text-danger:hover {
   background: transparent;
   border: 2px solid white; }
   .btn-primary:hover {
-    border: 2px solid #0099cc; }
+    border: 2px solid #289ae7;
+    background: #289ae7; }
 
 .col-md-3 {
   padding: 0; }
@@ -4722,61 +4738,50 @@ a.text-danger:focus, a.text-danger:hover {
 .navbar .nav-link {
   opacity: .5; }
 
-.jumbotron {
-  position: relative;
-  background: #343838;
-  background: url(../i/me.jpg);
-  background-size: cover;
-  background-position: center;
-  color: whitesmoke;
-  border-radius: 0;
-  margin-bottom: 0;
-  height: 100vh;
-  padding: 0; }
+img.width-100 {
+  min-width: 100%;
+  height: auto !important;
+  margin-bottom: 100px; }
+  img.width-100:last-of-type {
+    margin-bottom: 0; }
 
-section {
-  color: white;
-  position: relative;
-  overflow: hidden; }
+.margin-after-work {
+  margin-bottom: 92px; }
 
-section:first-of-type {
-  height: 100vh;
+#splash, #work, #cv, #contact {
   overflow: hidden;
-  background: deepskyblue;
-  background: url(../i/me.jpg);
-  background-size: cover;
-  background-position: center; }
+  color: white;
+  position: relative; }
 
-#cv .row, #contact .row {
+#item .row, #cv .row, #contact .row {
   padding: 100px 0; }
-  #cv .row .row, #contact .row .row {
+  #item .row .row, #cv .row .row, #contact .row .row {
     padding: 0;
     margin: 0; }
 
-#cv ul, #contact ul {
+#item ul, #cv ul, #contact ul {
   margin: 0; }
 
 #splash {
+  height: 100vh;
   background-repeat: repeat-x;
-  background-image: linear-gradient(45deg, white, deepskyblue);
+  background-image: linear-gradient(45deg, white, #3498DB);
   background-repeat: repeat-x;
-  background-image: linear-gradient(180deg, turquoise, deepskyblue); }
+  background-image: linear-gradient(180deg, #1ABC9C, #3498DB); }
   #splash .fa-big:nth-child(1) {
-    color: white;
-    color: turquoise;
+    color: #1ABC9C;
     opacity: .3; }
   #splash .fa-big:nth-child(2) {
-    color: deepskyblue;
-    color: deepskyblue;
+    color: #3498DB;
     opacity: .3; }
 
 #work {
-  background-image: linear-gradient(to bottom, lightgray 0%, #3a3a3a 100%);
+  background-image: linear-gradient(to bottom, #ccc 0%, #333333 100%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFD3D3D3', endColorstr='#FF3A3A3A', GradientType=0);
-  background-image: linear-gradient(#3a3a3a, #878787 50%, #3a3a3a);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFCCCCCC', endColorstr='#FF333333', GradientType=0);
+  background-image: linear-gradient(#333333, gray 50%, #333333);
   background-repeat: no-repeat;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF3A3A3A', endColorstr='#FF3A3A3A', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF333333', endColorstr='#FF333333', GradientType=0);
   background: black; }
   #work .item {
     width: 100%;
@@ -4844,43 +4849,42 @@ section:first-of-type {
         background-size: cover;
         background-position: center; }
 
-#cv {
-  background: deepskyblue;
+#item, #cv {
+  background: #3498DB;
   background-repeat: repeat-x;
-  background-image: linear-gradient(20deg, deepskyblue, #33ccff);
-  background-repeat: repeat-x;
-  background-image: linear-gradient(180deg, deepskyblue, turquoise); }
-  #cv ul li i {
+  background-image: linear-gradient(180deg, #3498DB, #1ABC9C); }
+  #item ul li i, #cv ul li i {
     display: inline-block;
     text-align: center;
     margin-right: 5px; }
-  #cv .fa-big:nth-child(1) {
-    color: #f2f2f2;
-    color: turquoise;
+  #item .fa-big:nth-child(1), #cv .fa-big:nth-child(1) {
+    color: #1ABC9C;
     opacity: .3; }
-  #cv .fa-big:nth-child(2) {
-    color: #00ace6;
-    color: deepskyblue;
+  #item .fa-big:nth-child(2), #cv .fa-big:nth-child(2) {
+    color: #3498DB;
     opacity: .3; }
-  #cv .fa-gear {
-    color: #0099cc; }
+  #item .fa-gear, #cv .fa-gear {
+    color: #05d1a9; }
 
 #contact {
   background-repeat: repeat-x;
-  background-image: linear-gradient(180deg, #ededed, #bababa); }
+  background-image: linear-gradient(180deg, #e6e6e6, #b3b3b3); }
   #contact .fa-big:nth-child(1) {
     color: #f2f2f2;
-    color: #ededed;
+    color: #e6e6e6;
     opacity: .1; }
   #contact .fa-big:nth-child(2) {
-    color: #00ace6;
-    color: #bababa;
+    color: #258cd1;
+    color: #b3b3b3;
     opacity: .1; }
+
+#item {
+  min-height: 100vh; }
 
 .fa-big {
   position: absolute;
   top: -150px;
-  color: deepskyblue;
+  color: #3498DB;
   left: -250px;
   font-size: 900px; }
   @media (min-width: 1200px) {
@@ -4959,6 +4963,14 @@ ul {
     list-style-type: none; }
     ul li.hide {
       opacity: 0; }
+
+a.underline {
+  text-decoration: underline; }
+
+a.back {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px; }
 
 img {
   width: 100%;

@@ -3,4 +3,4 @@
 // Copy variables from `_variables.scss` to this file to override default values
 // without modifying source files.
 
-$brand-primary:             deepskyblue !default;
+$brand-primary:             saturate(deepskyblue,10) !default;

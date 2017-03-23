@@ -1,7 +1,7 @@
 @import "bootstrap";
-$brand-color: turquoise;
-$brand-color: deepskyblue;
-$accent-color: lightgray;
+$brand-color: #3498DB;
+$accent-color: #1ABC9C;
+$neutral-color: #ccc;
 
 *:focus {
     outline:none!important;
@@ -9,10 +9,22 @@ $accent-color: lightgray;
 *{
   font-family:roboto;
 }
+::selection {
+  background: saturate($accent-color,20); /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #ffb7b7; /* Gecko Browsers */
+}
+body {
+  @include gradient-directional($brand-color,$accent-color,180deg);
+}
 .navbar {
     background:transparentize($brand-color,1);
     @media (max-width:780px) {
         background:$brand-color;
+    }
+    &.darken {
+      @include gradient-directional(transparentize($brand-color,0),$accent-color,45deg);
     }
     .fa {
         color:white;
@@ -22,7 +34,8 @@ $accent-color: lightgray;
     background:transparent;
     border:2px solid white;
     &:hover {
-      border:2px solid darken($brand-color,10);
+      border:2px solid saturate($brand-color,10);
+      background:saturate($brand-color,10);
     };
 }
 .col-md-3 {
@@ -55,38 +68,27 @@ $accent-color: lightgray;
         opacity:.5;
     }
 }
-.jumbotron {
-    position:relative;
-    background:#343838;
-    background:url(../i/me.jpg);
-    background-size:cover;
-    background-position:center;
-    color:whitesmoke;
-    border-radius:0;
+
+img.width-100 {
+  min-width:100%;
+  height:auto!important;
+  margin-bottom:100px;
+  &:last-of-type {
     margin-bottom:0;
-    height:100vh;
-    padding:0;
+  }
 }
-section {
-    color:white;
-    position:relative;
-    overflow:hidden;
+.margin-after-work {
+  margin-bottom:92px;
 }
-section:first-of-type {
-    height:100vh;
-    overflow:hidden;
-    background:$brand-color;
-    background:url(../i/me.jpg);
-    background-size:cover;
-    background-position:center;
-}
-
 // Sections
-#splash, #work, #cv, #contact {
 
+#splash, #work, #cv, #contact {
+  overflow:hidden;
+  color:white;
+  position:relative;
 }
 
-#cv, #contact {
+#item, #cv, #contact {
   .row {
     padding:100px 0;
     .row {
@@ -98,23 +100,22 @@ section:first-of-type {
   }
 }
 #splash {
+  height:100vh;
   @include gradient-directional(lighten($brand-color,80),$brand-color,45deg);
-  @include gradient-directional(turquoise,deepskyblue,180deg);
+  @include gradient-directional($accent-color,$brand-color,180deg);
   .fa-big:nth-child(1) {
-    color:lighten($brand-color,80);
-    color:turquoise;
+    color:$accent-color;
     opacity:.3;
   }
   .fa-big:nth-child(2) {
     color:$brand-color;
-    color:deepskyblue;
     opacity:.3;
   }
 }
 #work {
-  @include gradient-y($accent-color,darken($accent-color,60),0%,100%);
-  @include gradient-y-three-colors(darken($accent-color,60),darken($accent-color,30),50%,darken($accent-color,60));
-  background:darken($accent-color,90);
+  @include gradient-y($neutral-color,darken($neutral-color,60),0%,100%);
+  @include gradient-y-three-colors(darken($neutral-color,60),darken($neutral-color,30),50%,darken($neutral-color,60));
+  background:darken($neutral-color,90);
   .item {
     width:100%;
     background-size:cover;
@@ -197,41 +198,42 @@ section:first-of-type {
     }
   }
 }
-#cv {
+#item, #cv {
   background:$brand-color;
-  @include gradient-directional($brand-color,lighten($brand-color,10),20deg);
-  @include gradient-directional(deepskyblue,turquoise,180deg);
+  @include gradient-directional($brand-color,$accent-color,180deg);
   ul li i {
     display:inline-block;
     text-align:center;
     margin-right:5px;
   }
   .fa-big:nth-child(1) {
-    color:darken(white,5);
-    color:turquoise;
+    color:$accent-color;
     opacity:.3;
   }
   .fa-big:nth-child(2) {
-    color:darken($brand-color,5);
-    color:deepskyblue;
+    color:$brand-color;
     opacity:.3;
   }
   .fa-gear {
-    color:darken($brand-color,10);
+    color:saturate($accent-color,20);
   }
 }
 #contact {
-  @include gradient-directional(lighten($accent-color,10),darken($accent-color,10),180deg);
+  @include gradient-directional(lighten($neutral-color,10),darken($neutral-color,10),180deg);
   .fa-big:nth-child(1) {
     color:darken(white,5);
-    color:lighten($accent-color,10);
+    color:lighten($neutral-color,10);
     opacity:.1;
   }
   .fa-big:nth-child(2) {
     color:darken($brand-color,5);
-    color:darken($accent-color,10);
+    color:darken($neutral-color,10);
     opacity:.1;
   }
+}
+
+#item {
+  min-height:100vh;
 }
 
 .fa-big {
@@ -327,6 +329,14 @@ ul {
             opacity:0;
         }
     }
+}
+a.underline {
+  text-decoration:underline;
+}
+a.back {
+  display:block;
+  margin-bottom:10px;
+  font-size:14px;
 }
 img {
     width:100%;
