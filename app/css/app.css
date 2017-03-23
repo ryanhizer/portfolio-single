@@ -4878,9 +4878,6 @@ img.width-100 {
     color: #b3b3b3;
     opacity: .1; }
 
-#item {
-  min-height: 100vh; }
-
 .fa-big {
   position: absolute;
   top: -150px;
