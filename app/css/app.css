@@ -4676,6 +4676,14 @@ a.text-danger:focus, a.text-danger:hover {
   .hidden-print {
     display: none !important; } }
 
+/*$accent-color: red;*/
+/*
+$brand-color: #fff;
+$accent-color: #eee;
+$text: #222;*/
+/*$brand-color: #f2f2f2;
+$accent-color: #fafafa;
+$text: #5d5d5d;*/
 *:focus {
   outline: none !important; }
 
@@ -4683,7 +4691,7 @@ a.text-danger:focus, a.text-danger:hover {
   font-family: roboto; }
 
 ::selection {
-  background: #05d1a9;
+  background: #00c6c6;
   /* WebKit/Blink Browsers */ }
 
 ::-moz-selection {
@@ -4692,34 +4700,41 @@ a.text-danger:focus, a.text-danger:hover {
 
 body {
   background-repeat: repeat-x;
-  background-image: linear-gradient(180deg, #3498DB, #1ABC9C); }
+  background-image: linear-gradient(180deg, white, #0cbaba);
+  background: white; }
 
 .navbar {
-  background: rgba(52, 152, 219, 0); }
+  background: black; }
   @media (max-width: 780px) {
     .navbar {
-      background: #3498DB; } }
+      background: black; } }
   .navbar.darken {
     background-repeat: repeat-x;
-    background-image: linear-gradient(45deg, #3498db, #1ABC9C); }
+    background-image: linear-gradient(45deg, white, #0cbaba); }
   .navbar .fa {
-    color: white; }
+    color: black; }
 
 .btn-primary {
-  background: transparent;
-  border: 2px solid white; }
-  .btn-primary:hover {
-    border: 2px solid #289ae7;
-    background: #289ae7; }
+  border: 2px solid black !important;
+  background: #0cbaba;
+  border: #0cbaba;
+  color: white; }
+  .btn-primary:hover, .btn-primary:active, .btn-primary:visited, .btn-primary:focus {
+    border: 2px solid black !important;
+    background: black !important; }
 
 .col-md-3 {
   padding: 0; }
 
 .navbar-nav .nav-link a {
+  color: black !important;
   color: white !important; }
 
 .navbar-toggler {
   padding-left: 0; }
+
+a.navbar {
+  color: white; }
 
 .navbar .navbar-brand {
   color: white;
@@ -4729,7 +4744,7 @@ body {
   .navbar .navbar-brand span {
     opacity: .5; }
   .navbar .navbar-brand:hover {
-    color: white; }
+    color: #0cbaba; }
 
 .navbar .nav-link, .navbar .nav-link:hover, .navbar .nav-link.active, .navbar .nav-link.active:focus, .navbar .nav-link.active:hover {
   color: white;
@@ -4737,6 +4752,21 @@ body {
 
 .navbar .nav-link {
   opacity: .5; }
+
+#myGIF {
+  position: relative;
+  right: -32px;
+  text-decoration: none; }
+  #myGIF:hover {
+    text-decoration: none; }
+  @media (max-width: 780px) {
+    #myGIF {
+      display: none; } }
+  #myGIF .myGIF-indicator {
+    padding: 18px;
+    background: #333;
+    margin-left: 18px;
+    text-align: center; }
 
 img.width-100 {
   min-width: 100%;
@@ -4750,7 +4780,7 @@ img.width-100 {
 
 #splash, #work, #cv, #contact {
   overflow: hidden;
-  color: white;
+  color: black;
   position: relative; }
 
 #item .row, #cv .row, #contact .row {
@@ -4764,24 +4794,12 @@ img.width-100 {
 
 #splash {
   height: 100vh;
-  background-repeat: repeat-x;
-  background-image: linear-gradient(45deg, white, #3498DB);
-  background-repeat: repeat-x;
-  background-image: linear-gradient(180deg, #1ABC9C, #3498DB); }
-  #splash .fa-big:nth-child(1) {
-    color: #1ABC9C;
-    opacity: .3; }
-  #splash .fa-big:nth-child(2) {
-    color: #3498DB;
-    opacity: .3; }
+  background: #0cbaba;
+  /*background:url(https://media.tenor.co/images/5809cf4d61dc047ff129416fbfc13d66/tenor.gif);*/
+  background-size: cover;
+  background-position: center; }
 
 #work {
-  background-image: linear-gradient(to bottom, #ccc 0%, #333333 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFCCCCCC', endColorstr='#FF333333', GradientType=0);
-  background-image: linear-gradient(#333333, gray 50%, #333333);
-  background-repeat: no-repeat;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF333333', endColorstr='#FF333333', GradientType=0);
   background: black; }
   #work .item {
     width: 100%;
@@ -4796,7 +4814,7 @@ img.width-100 {
       padding: 100px 0;
       width: 100%;
       height: 10px;
-      opacity: .7;
+      opacity: .5;
       display: block; }
       #work .item a:hover {
         opacity: 1; }
@@ -4845,43 +4863,37 @@ img.width-100 {
         background-size: cover;
         background-position: center; }
       #work .item a.lexalytics {
-        background: url(../i/lexalyticsbg.jpg);
+        background: url(../i/phone.jpg);
         background-size: cover;
         background-position: center; }
 
-#item, #cv {
-  background: #3498DB;
+#item, #cv, #contact {
   background-repeat: repeat-x;
-  background-image: linear-gradient(180deg, #3498DB, #1ABC9C); }
-  #item ul li i, #cv ul li i {
+  background-image: linear-gradient(180deg, white, #0cbaba);
+  background: white; }
+  #item ul li i, #cv ul li i, #contact ul li i {
     display: inline-block;
     text-align: center;
     margin-right: 5px; }
-  #item .fa-big:nth-child(1), #cv .fa-big:nth-child(1) {
-    color: #1ABC9C;
+  #item .fa-big:nth-child(1), #cv .fa-big:nth-child(1), #contact .fa-big:nth-child(1) {
+    color: #0cbaba;
     opacity: .3; }
-  #item .fa-big:nth-child(2), #cv .fa-big:nth-child(2) {
-    color: #3498DB;
-    opacity: .3; }
-  #item .fa-gear, #cv .fa-gear {
-    color: #05d1a9; }
+  #item .fa-gear, #cv .fa-gear, #contact .fa-gear {
+    color: black; }
 
-#contact {
-  background-repeat: repeat-x;
-  background-image: linear-gradient(180deg, #e6e6e6, #b3b3b3); }
-  #contact .fa-big:nth-child(1) {
-    color: #f2f2f2;
-    color: #e6e6e6;
-    opacity: .1; }
-  #contact .fa-big:nth-child(2) {
-    color: #258cd1;
-    color: #b3b3b3;
-    opacity: .1; }
+/*#contact {
+  background:transparentize($accent-color,.97);
+  .fa-big {
+    color:white;
+  }
+}*/
+#item img {
+  border: none; }
 
 .fa-big {
   position: absolute;
   top: -150px;
-  color: #3498DB;
+  color: white;
   left: -250px;
   font-size: 900px; }
   @media (min-width: 1200px) {
@@ -4905,7 +4917,17 @@ img.width-100 {
 .form-control {
   border: none;
   padding: 15px;
-  font-size: 14px; }
+  font-size: 14px;
+  background: white;
+  color: #0cbaba;
+  box-shadow: 0 0 10px rgba(12, 186, 186, 0.2); }
+  .form-control:focus {
+    color: white;
+    background: black; }
+    .form-control:focus::placeholder {
+      color: rgba(255, 255, 255, 0.5); }
+  .form-control::placeholder {
+    color: rgba(0, 0, 0, 0.5); }
 
 .job h6, label {
   font-size: 14px;
@@ -4922,7 +4944,7 @@ img.width-100 {
   padding: 0; }
 
 h1, h2, h3, h4, h5, h6, p, li, a {
-  color: white; }
+  color: black; }
 
 h1 {
   font-weight: 400;
@@ -4937,7 +4959,7 @@ h1 {
 h2 {
   margin-bottom: 20px;
   padding-bottom: 10px;
-  border-bottom: 2px dotted white;
+  border-bottom: 2px dotted black;
   position: relative; }
   h2 .fa {
     margin-right: 10px; }
@@ -4972,7 +4994,7 @@ a.back {
 img {
   width: 100%;
   max-width: 100%;
-  border: 1px solid white; }
+  /*border:1px solid $text;*/ }
 
 .rotate-left {
   transform: rotate(-2deg); }
@@ -5026,7 +5048,7 @@ ul.social {
   display: inline-block;
   padding-bottom: 8px;
   width: 100%;
-  border-bottom: 2px dotted white; }
+  border-bottom: 2px dotted black; }
   ul.social li {
     float: left;
     margin: 0 8px;
@@ -5074,11 +5096,20 @@ ul.social {
 
 @keyframes spin-scale {
   0% {
-    transform: rotate(0deg) scale(1); }
+    transform: rotate(0deg) scale(1);
+    width: 1%; }
+  25% {
+    transform: rotate(180deg) scale(1);
+    width: 4%; }
   50% {
-    transform: rotate(180deg) scale(2); }
+    transform: rotate(180deg) scale(1);
+    width: 2%; }
+  75% {
+    transform: rotate(180deg) scale(1);
+    width: 4%; }
   100% {
-    transform: rotate(360deg) scale(1); } }
+    transform: rotate(360deg) scale(1);
+    width: 1%; } }
 
 @keyframes spin-scale-2 {
   0% {
@@ -5109,6 +5140,20 @@ ul.social {
   100% {
     transform: rotate(1deg) scale(1);
     translate: 0px, 0px; } }
+
+svg {
+  position: absolute;
+  min-width: 100%;
+  height: 100vh; }
+
+rect, polygon {
+  fill: white;
+  opacity: 1;
+  transform-origin: center; }
+  rect:nth-child(even), polygon:nth-child(even) {
+    animation: spin-scale 1s infinite reverse ease-in-out; }
+  rect:nth-child(odd), polygon:nth-child(odd) {
+    animation: spin-scale 2s infinite reverse ease-in-out; }
 
 .float {
   animation: float 15s infinite ease-in-out; }
