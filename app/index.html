@@ -6,10 +6,12 @@
     <title>Portfolio Prev</title>
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap-toggle.min.css">
     <link rel="stylesheet" type="text/css" href="./css/app.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap-toggle.min.js"></script>
     <script type="text/javascript" src="./js/holder.min.js"></script>
     <script type="text/javascript" src="./js/scrollmagic.min.js"></script>
     <!-- <script src="js/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script> -->
@@ -28,7 +30,8 @@
     </span>
   </button>
   <a class="navbar-brand" href="/">Ryan Hizer <span>Design &amp; Code</span></a>
-  <a id="myGIF" class="navbar pull-right" href="#">My Favorite GIF Mode <span class="myGIF-indicator">OFF</span></a>
+
+  <div class="pull-right shaq-mode"><span class="label">Shaq</span> <input class="navbar pull-right" type="checkbox" data-toggle="toggle"></div>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       <a class="nav-item nav-link" href="/#work">Work</a>
@@ -38,7 +41,7 @@
     </div>
   </div>
 </nav>
-    
+
 
     <section id="splash">
         <svg id="shapes" xmlns="http://www.w3.org/2000/svg" width="1018.41" height="582.88" viewBox="0 0 1018.41 582.88">
@@ -216,7 +219,7 @@
                       <div class="form-group">
                         <label for="message">Message</label>
                         <textarea class="form-control" name="message" id="message" rows="6" placeholder="What's up?"></textarea>
-                      </div><!-- 
+                      </div><!--
                       <button type="submit" class="btn btn-primary">Send</button> -->
                       <input type="submit" name="submit" value="Send" class="btn btn-primary">
                     </form>
@@ -239,28 +242,29 @@
             });
 
 
-            $("#myGIF").on('click', function(event) {
-                var indicator = $(this).find('.myGIF-indicator');
-                var status = indicator.html();
-                var shaqPath = '/i/shaq.gif';
-                if (status == "OFF") {
-                    indicator.html('ON');
-                    $('#splash').css("background-image", "url(" + shaqPath + ")");
-                    $('#shapes').hide();
-                    indicator.css('color', 'white');
-                    indicator.css('padding', '18px 21px 18px 22px');
-                    indicator.css('margin-left', '17.5px');
-                    indicator.css('background-color', '#0cbaba');
-                } else {
-                    indicator.html('OFF');
-                    $('#splash').css("background-image", "none");
-                    $('#shapes').show();
-                    indicator.css('color', 'white');
-                    indicator.css('background-color', '#333');
-                    indicator.css('margin-left', '18px');
-                    indicator.css('padding', '18px 18px 18px 18px');
-                }
-            });
+            // $("#myGIF").on('click', function(event) {
+            //     var indicator = $(this);
+            //     var status = indicator.html();
+            //     var shaqPath = '/i/shaq.gif';
+            //     if (status == "OFF") {
+            //         indicator.html('ON');
+            //         $('#splash').css("background-image", "url(" + shaqPath + ")");
+            //         $('#shapes').hide();
+            //         indicator.css('color', 'white');
+            //         indicator.css('padding', '18px 21px 18px 22px');
+            //         indicator.css('margin-left', '17.5px');
+            //         indicator.css('background-color', '#0cbaba');
+            //     } else {
+            //         indicator.html('OFF');
+            //         $('#splash').css("background-image", "none");
+            //         $('#shapes').show();
+            //         indicator.css('color', 'white');
+            //         indicator.css('background-color', '#333');
+            //         indicator.css('margin-left', '18px');
+            //         indicator.css('padding', '18px 18px 18px 18px');
+            //     }
+            // });
+
         });
     </script>
     <script type="text/javascript">

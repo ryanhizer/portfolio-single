@@ -4715,13 +4715,26 @@ body {
     color: black; }
 
 .btn-primary {
-  border: 2px solid black !important;
-  background: #0cbaba;
-  border: #0cbaba;
-  color: white; }
+  background: #0cbaba !important;
+  border: #0cbaba !important; }
   .btn-primary:hover, .btn-primary:active, .btn-primary:visited, .btn-primary:focus {
-    border: 2px solid black !important;
-    background: black !important; }
+    background: #0aa2a2;
+    border: #0aa2a2; }
+
+.shaq-mode {
+  color: white; }
+  .shaq-mode span.label {
+    position: relative;
+    top: 2.5px; }
+  .shaq-mode .toggle {
+    margin-left: 10px; }
+
+.btn-default {
+  background: gray;
+  color: white; }
+
+.toggle-handle {
+  background: white; }
 
 .col-md-3 {
   padding: 0; }
@@ -4870,16 +4883,17 @@ img.width-100 {
 #item, #cv, #contact {
   background-repeat: repeat-x;
   background-image: linear-gradient(180deg, white, #0cbaba);
-  background: white; }
+  background: #dadada; }
   #item ul li i, #cv ul li i, #contact ul li i {
     display: inline-block;
     text-align: center;
     margin-right: 5px; }
   #item .fa-big:nth-child(1), #cv .fa-big:nth-child(1), #contact .fa-big:nth-child(1) {
     color: #0cbaba;
-    opacity: .3; }
+    color: black;
+    opacity: .02; }
   #item .fa-gear, #cv .fa-gear, #contact .fa-gear {
-    color: black; }
+    color: #0cbaba; }
 
 /*#contact {
   background:transparentize($accent-color,.97);
@@ -4918,16 +4932,16 @@ img.width-100 {
   border: none;
   padding: 15px;
   font-size: 14px;
-  background: white;
+  background: #0cbaba;
   color: #0cbaba;
-  box-shadow: 0 0 10px rgba(12, 186, 186, 0.2); }
+  color: white; }
   .form-control:focus {
     color: white;
-    background: black; }
+    background: #0aa2a2; }
     .form-control:focus::placeholder {
       color: rgba(255, 255, 255, 0.5); }
   .form-control::placeholder {
-    color: rgba(0, 0, 0, 0.5); }
+    color: rgba(255, 255, 255, 0.5); }
 
 .job h6, label {
   font-size: 14px;

@@ -48,14 +48,34 @@ body {
     }
 }
 .btn-primary {
-    border:2px solid $text!important;
-    background:$accent-color;
-    border:$accent-color;
-    color:white;
+    // border:2px solid $text!important;
+    background:$accent-color!important;
+    border:$accent-color!important;
+    // border:$accent-color;
+    // color:white;
     &:hover, &:active, &:visited, &:focus {
-      border:2px solid darken($text,10)!important;
-      background:darken($text,10)!important;
+      background:darken($accent-color,5);
+      border:darken($accent-color,5);
+      // border:2px solid darken($text,10)!important;
+      // background:darken($text,10)!important;
     };
+}
+.shaq-mode {
+  span.label {
+    position:relative;
+    top:2.5px;
+  }
+  color:white;
+  .toggle {
+    margin-left:10px;
+  }
+}
+.btn-default {
+  background:gray;
+  color:white;
+}
+.toggle-handle {
+  background:white;
 }
 .col-md-3 {
     padding:0;
@@ -231,7 +251,7 @@ img.width-100 {
 }
 #item, #cv, #contact {
   @include gradient-directional($brand-color,$accent-color,180deg);
-  background:white;
+  background:#dadada;
   ul li i {
     display:inline-block;
     text-align:center;
@@ -239,10 +259,11 @@ img.width-100 {
   }
   .fa-big:nth-child(1) {
     color:$accent-color;
-    opacity:.3;
+    color:black;
+    opacity:.02;
   }
   .fa-gear {
-    color:$text;
+    color:$accent-color;
   }
 }
 
@@ -295,18 +316,18 @@ img.width-100 {
     border:none;
     padding:15px;
     font-size:14px;
-    background:white;
+    background:$accent-color;
     color:$accent-color;
-    box-shadow:0 0 10px transparentize($accent-color,.8);
+    color:white;
     &:focus {
       color:white;
-      background:$text;
+      background:darken($accent-color,5);
       &::placeholder{
         color:transparentize(white,.5);
       };
     }
     &::placeholder {
-      color:transparentize($text,.5);
+      color:transparentize(white,.5);
     };
 }
 .job h6, label {
@@ -578,7 +599,7 @@ rect,polygon {
   &:nth-child(odd) {
     animation: spin-scale 2s infinite reverse ease-in-out;
   }
-} 
+}
 .float {
     animation: float 15s infinite ease-in-out;
 }
