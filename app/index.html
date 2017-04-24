@@ -12,10 +12,10 @@
     <script type="text/javascript" src="./js/bootstrap.min.js"></script>
     <script type="text/javascript" src="./js/holder.min.js"></script>
     <script type="text/javascript" src="./js/scrollmagic.min.js"></script>
-    <script src="js/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
+    <!-- <script src="js/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script> -->
 </head>
 <body id="top">
-<nav class="navbar navbar-fixed-bottom container">
+<nav class="navbar navbar-fixed-bottom container-fluid">
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon">
     <!-- <i class="fa fa-bars"></i> -->
@@ -28,21 +28,44 @@
     </span>
   </button>
   <a class="navbar-brand" href="/">Ryan Hizer <span>Design &amp; Code</span></a>
+  <a id="myGIF" class="navbar pull-right" href="#">My Favorite GIF Mode <span class="myGIF-indicator">OFF</span></a>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       <a class="nav-item nav-link" href="/#work">Work</a>
       <a class="nav-item nav-link" href="/#cv">CV</a>
       <a class="nav-item nav-link" href="/#contact">Contact</a>
+      <a class="nav-item nav-link" href="/#top">Top</a>
     </div>
   </div>
 </nav>
+    
+
     <section id="splash">
+        <svg id="shapes" xmlns="http://www.w3.org/2000/svg" width="1018.41" height="582.88" viewBox="0 0 1018.41 582.88">
+          <title>pattern</title>
+          <polygon points="49.58 11.2 79.98 67.96 0 34.74 49.58 11.2"/>
+          <polygon points="147.18 510.9 177.58 567.67 97.6 534.45 147.18 510.9"/>
+          <polygon points="344.79 69.56 406.85 86.71 327.63 121.69 344.79 69.56"/>
+          <polygon points="921.44 507.91 1002.22 471.06 968.6 550.87 921.44 507.91"/>
+          <polygon points="492.92 495.02 556.42 496.29 494.68 582.88 492.92 495.02"/>
+          <polygon points="605.17 237.59 643.71 187.11 677.1 288.07 605.17 237.59"/>
+          <polygon points="962.69 0 1018.41 30.48 923.64 78.72 962.69 0"/>
+          <rect x="776.01" y="389.4" width="15" height="77.33" transform="translate(286.05 1169.59) rotate(-84.88)"/>
+          <rect x="885.09" y="205.23" width="77.33" height="15" transform="translate(-25.32 225) rotate(-13.75)"/>
+          <rect x="229.5" y="256.56" width="15" height="77.33" transform="translate(-134.03 213.42) rotate(-38.87)"/>
+          <rect x="33.72" y="217.5" width="15" height="77.33" transform="translate(-17.67 2.5) rotate(-3.7)"/>
+          <rect x="619.21" y="55.28" width="38.67" height="15" transform="translate(329.53 625.07) rotate(-66.95)"/>
+          <rect x="432.36" y="357.35" width="38.67" height="15" transform="translate(-62.11 636.95) rotate(-66.95)"/>
+        </svg>
+
         <div class="container">
             <div class="row">
                 <div class="col-md-6"></div>
                 <div class="col-md-6">
-                    <i class="fa fa-code fa-big spin-scale"></i>
-                    <i class="fa fa-code fa-big spin-scale-fast"></i>
+                    <!-- <i class="fa fa-smile-o fa-big spin-scale"></i>
+                    <i class="fa fa-smile-o fa-big spin-scale-fast"></i> -->
+                    <!-- <i class="fa fa-circle fa-big spin-scale"></i> -->
+                    <!-- <i class="fa fa-smile-o fa-big spin-scale-fast"></i> -->
                 </div>
             </div>
         </div>
@@ -116,11 +139,11 @@
     <section id="cv">
         <div class="container">
             <div class="row">
-            <i class="fa fa-user fa-big spin-scale"></i>
-            <i class="fa fa-user fa-big spin-scale-fast"></i>
+            <!-- <i class="fa fa-file-text-o fa-big spin-scale"></i> -->
+            <i class="fa fa-file-text-o fa-big spin-scale-fast"></i>
                 <div class="col-md-6"></div>
                 <div class="col-md-6">
-                    <h2><i class="fa fa-user"></i>CV</h2>
+                    <h2><i class="fa fa-file-text-o"></i>CV</h2>
                     <div>
                         <h4>Summary</h4>
                         <p>Experienced designer, front-end developer, copywriter, and marketing strategist performing best in highly collaborative, creative environments. High standards and strong work ethic. Experience working with design assets for premiere brands and organizations such as LEGO®, New York Comic Con, <i>The Late Show with Stephen Colbert</i>, <i>The Tonight Show Starring Jimmy Fallon</i>, and <i>The Daily Show</i>.</p>
@@ -132,7 +155,7 @@
                                 <li><i class="fa fa-gear spin"></i>Illustrator</li>
                                 <li><i class="fa fa-gear spin"></i>InDesign</li>
                                 <li><i class="fa fa-gear spin"></i>Sketch</li>
-                                <li><i class="fa fa-gear spin"></i>Premier</li>
+                                <li><i class="fa fa-gear spin"></i>Premiere</li>
                                 <li><i class="fa fa-gear spin"></i>After Effects</li>
                             </ul>
                             <ul class="col-md-4">
@@ -176,25 +199,26 @@
     <section id="contact">
         <div class="container">
             <div class="row">
-            <i class="fa fa-envelope fa-big spin-scale"></i>
+            <!-- <i class="fa fa-envelope fa-big spin-scale"></i> -->
             <i class="fa fa-envelope fa-big spin-scale-fast"></i>
                 <div class="col-md-6"></div>
                 <div class="col-md-6">
                     <h2><i class="fa fa-envelope-o"></i>Contact</h2>
-                    <form action="mailto:ryanhizer@gmail.com" method="post" enctype="text/plain">
+                    <form action="https://formspree.io/ryanhizer@gmail.com" method="POST" enctype="text/plain">
                       <div class="form-group">
                         <label for="name">Name</label>
-                        <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="Your Name">
+                        <input type="text" name="name" class="form-control" id="name" aria-describedby="name" placeholder="Your Name">
                       </div>
                       <div class="form-group">
                         <label for="email">Email address</label>
-                        <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="Enter email">
+                        <input type="email" name="_replyto" class="form-control" id="email" aria-describedby="email" placeholder="Enter email">
                       </div>
                       <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea class="form-control" id="message" rows="6"></textarea>
-                      </div>
-                      <button type="submit" class="btn btn-primary">Send</button>
+                        <textarea class="form-control" name="message" id="message" rows="6" placeholder="What's up?"></textarea>
+                      </div><!-- 
+                      <button type="submit" class="btn btn-primary">Send</button> -->
+                      <input type="submit" name="submit" value="Send" class="btn btn-primary">
                     </form>
                     <div class="row">
                         <ul class="social">
@@ -212,6 +236,30 @@
         $(document).ready(function(){
             $('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function(){
                 $(this).toggleClass('open');
+            });
+
+
+            $("#myGIF").on('click', function(event) {
+                var indicator = $(this).find('.myGIF-indicator');
+                var status = indicator.html();
+                var shaqPath = '/i/shaq.gif';
+                if (status == "OFF") {
+                    indicator.html('ON');
+                    $('#splash').css("background-image", "url(" + shaqPath + ")");
+                    $('#shapes').hide();
+                    indicator.css('color', 'white');
+                    indicator.css('padding', '18px 21px 18px 22px');
+                    indicator.css('margin-left', '17.5px');
+                    indicator.css('background-color', '#0cbaba');
+                } else {
+                    indicator.html('OFF');
+                    $('#splash').css("background-image", "none");
+                    $('#shapes').show();
+                    indicator.css('color', 'white');
+                    indicator.css('background-color', '#333');
+                    indicator.css('margin-left', '18px');
+                    indicator.css('padding', '18px 18px 18px 18px');
+                }
             });
         });
     </script>
